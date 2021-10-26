@@ -1,0 +1,29 @@
+---
+application.profiles: debug
+eureka:
+  registerEureka: false
+mctech:
+  rpc:
+    service:
+      # key为服务的serviceId, value为对应的目标服务器的地址信息
+      # 'quality-website': 'http://localhost:6886/quality/'
+      # 'common-mb-service': 'http://localhost:9010/'
+cas:
+  client:
+    # cas身份认证，认证中心登录页所在的站点，跳转到登录页的地址会在后面加上'/login'路径，客户端重定向
+    casServerUrlPrefix: 'http://dev.mctech.vip/cas'
+    # cas身份认证，客户端验证返回的ticket有效性的地址前缀，有可能是内网地址。服务端内部调用路径
+    casValidateUrlPrefix: 'http://node-cas-site:8080/cas/'
+    # 身份认证成功后带着ticket回跳的服务器地址前缀，浏览器要访问的目标地址前缀
+    casServiceUrl: 'http://localhost:6110/'
+    # 需要跳过身份验证的地址，','分隔，支持ant格式的路径
+    ignorePathes: /js/**,/images/**
+file:
+  type: native
+  native:
+    bucketName: 'iwop-dev'
+    accessKeyId: 'LTAIMMsdxTwnzzof'
+    accessKeySecret: 'ZluzSTJNgco6W9uilp6sKB5HCQy4jz'
+    privateEndPoint: 'http://dev.mctech.vip/fss/'
+    publicEndPoint: 'http://dev.mctech.vip/fss/'
+    tempDir: 'tmp-files'

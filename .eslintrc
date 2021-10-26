@@ -1,0 +1,39 @@
+{
+  "root": true, // 当前配置为根配置，将不再从上级文件夹查找配置
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "standard-with-typescript"
+  ],
+  // 插件配置
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  // 环境配置
+  "env": {
+    "browser": true, // 设置为所需检查的代码是在浏览器环境运行的
+    "es2020": true // 设置所需检查代码为 es2020 语法书写
+  },
+  "rules": {
+    "prefer-const": 2, // 尽量使用 const 进行变量定义
+    "no-shadow": 2, // 报告变量重定义错误
+    "no-shadow-restricted-names": 2, // 报告受限标识符定义错误
+    "complexity": [ 1, 5 ], // 代码复杂度检查
+    // 根据屏幕分辨率情况，对长度超过一定长度的代码行进行警告，并忽略注释、字符串等情况
+    "max-len": [
+      1,
+      {
+        "code": 80,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ]
+  }
+}

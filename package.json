@@ -1,0 +1,68 @@
+{
+  "name": "@mctech/common-mb-website",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">= 12"
+  },
+  "description": "common-mb-website",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mcpack3",
+    "build:dev": "mcpack3 --env development --w",
+    "start": "node ./src/server/index.js --profiles=debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.mctech.vip:dev/product-lines/common/services/common-mb-website.git"
+  },
+  "author": "mctech",
+  "license": "ISC",
+  "devDependencies": {
+    "@mctech/biz-data-utils": "^0.0.42",
+    "@mctech/js-fs-client": "^4.0.27",
+    "@mctech/kaka-grid": "^2.3.1",
+    "@mctech/mussel": "^1.0.37",
+    "@mctech/packer3": "^3.1.5",
+    "@mctech/perfect-scrollbar": "^1.5.0-r1",
+    "@mctech/vue-kaka-grid": "^0.2.7",
+    "@mctech/web-frame": "^2.0.21",
+    "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
+    "element-resize-detector": "^1.2.1",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "file-saver": "^2.0.5",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.0",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.debounce": "^4.0.8",
+    "lodash-es": "^4.1.1",
+    "lodash.round": "^4.0.4",
+    "lodash.some": "^4.6.0",
+    "moment": "^2.24.0",
+    "nodemon": "^2.0.4",
+    "nzh": "^1.0.4",
+    "sparrow-popup": "^2.0.24",
+    "vue": "^2.6.11",
+    "vue-router": "^3.3.4",
+    "vue-template-compiler": "^2.6.11",
+    "vuex": "^3.5.1"
+  },
+  "dependencies": {
+    "@mctech/cas-client": "^4.0.22",
+    "@mctech/infra-cloud": "^4.1.4",
+    "@mctech/infra-configure": "^4.1.2",
+    "@mctech/koa-mount-api": "^1.1.4",
+    "Base64": "^1.1.0",
+    "pako": "^2.0.4"
+    
+  }
+}

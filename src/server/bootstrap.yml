@@ -1,0 +1,8 @@
+application:
+  name: "mb-website"
+  port: ${port:6886}
+  profiles: 
+    active: '${profiles:debug}'
+eureka:
+  client:
+    serverUrls: '${eureka.servers:http://eureka.mc/eureka}'

@@ -1,0 +1,9 @@
+{
+  "proxy": {
+    "port": 6110,
+    "mappings": {
+      "/cmb/": "http://localhost:6886/cmb/", // common-mb-website 站点
+      "*": "http://dev.mctech.vip" // portal 站点
+    }
+  }
+}
